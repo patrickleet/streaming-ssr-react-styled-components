@@ -1,0 +1,41 @@
+{
+  "name": "stream-all-the-things",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run generate-imported-components && parcel app/index.html",
+    "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore app/imported.js --exec 'npm run build && npm run start'",
+    "build": "rimraf dist && npm run generate-imported-components && npm run create-bundles",
+    "create-bundles": "concurrently \"npm run create-bundle:client\" \"npm run create-bundle:server\"",
+    "create-bundle:client": "cross-env BABEL_ENV=client parcel build app/index.html -d dist/client --public-url /dist/client",
+    "create-bundle:server": "cross-env BABEL_ENV=server parcel build server/index.js -d dist/server --public-url /dist --target=node",
+    "generate-imported-components": "imported-components app app/imported.js",
+    "start": "node dist/server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "llog": "^0.2.0",
+    "pino": "^5.10.6",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-helmet-async": "^0.2.0",
+    "react-imported-component": "^5.3.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "styled-components": "^4.1.3",
+    "through": "^2.3.8"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "parcel-bundler": "^1.11.0",
+    "react-hot-loader": "^4.6.3",
+    "rimraf": "^2.6.3"
+  }
+}
