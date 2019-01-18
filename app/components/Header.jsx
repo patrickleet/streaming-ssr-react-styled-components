@@ -34,7 +34,7 @@ const MenuLink = styled.li`
 
 export default () => (
   <Header>
-    <Brand>Stream all the things!</Brand>
+    <Brand>Stream things!</Brand>
     <Menu>
       <MenuLink>
         <NavLink 

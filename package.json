@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run generate-imported-components && parcel app/index.html",
+    "dev": "npm run generate-imported-components && parcel app/index.html --hmr-port 1235",
     "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore app/imported.js --exec 'npm run build && npm run start'",
     "build": "rimraf dist && npm run generate-imported-components && npm run create-bundles",
     "create-bundles": "concurrently \"npm run create-bundle:client\" \"npm run create-bundle:server\"",

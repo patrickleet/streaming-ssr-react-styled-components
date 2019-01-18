@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+
+  base:
+    image: node:11
+    volumes:
+      - .:/usr/src/service/
+    working_dir: /usr/src/service/
+
+  install:
+    extends:
+      service: base
+    command: npm i
+
+  build:
+    extends:
+      service: base
+    command: npm run build
+
+  create-bundles:
+    extends:
+      service: base
+    command: npm run create-bundles
