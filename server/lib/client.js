@@ -27,6 +27,5 @@ const [
 
 export const getHTMLFragments = ({ drainHydrateMarks }) => {
   const startingHTMLFragment = `${startingRawHTMLFragment}${drainHydrateMarks}`
-  const endingHTMLFragment = endingRawHTMLFragment.replace(`.client.js`, clientData.src)
-  return [startingHTMLFragment, endingHTMLFragment]
+  return [startingHTMLFragment, endingRawHTMLFragment]
 }
