@@ -4,15 +4,13 @@ import Page from '../components/Page'
 
 const Home = () => (
   <Page>
-
     <Helmet>
       <title>Home Page</title>
     </Helmet>
 
     <div>
-      Follow me at <a href="https://medium.com/@patrickleet">@patrickleet</a>
+      Follow me at <a href='https://medium.com/@patrickleet'>@patrickleet</a>
     </div>
-    
   </Page>
 )
 

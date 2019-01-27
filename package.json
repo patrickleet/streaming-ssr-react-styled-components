@@ -6,12 +6,26 @@
   "scripts": {
     "dev": "npm run generate-imported-components && parcel app/index.html --hmr-port 1235",
     "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore app/imported.js --exec 'npm run build && npm run start'",
+    "format": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js'",
     "build": "rimraf dist && npm run generate-imported-components && npm run create-bundles",
     "create-bundles": "concurrently \"npm run create-bundle:client\" \"npm run create-bundle:server\"",
     "create-bundle:client": "cross-env BABEL_ENV=client parcel build app/index.html -d dist/client --public-url /dist/client",
     "create-bundle:server": "cross-env BABEL_ENV=server parcel build server/index.js -d dist/server --public-url /dist --target=node",
     "generate-imported-components": "imported-components app app/imported.js",
     "start": "node dist/server"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
   },
   "author": "",
   "license": "ISC",
@@ -33,8 +47,11 @@
     "@babel/polyfill": "^7.2.5",
     "concurrently": "^4.1.0",
     "cross-env": "^5.2.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
     "nodemon": "^1.18.9",
     "parcel-bundler": "^1.11.0",
+    "prettier-standard": "^9.1.1",
     "react-hot-loader": "^4.6.3",
     "rimraf": "^2.6.3"
   }

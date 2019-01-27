@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 const Header = styled.header`
   z-index: 100;
@@ -37,16 +37,14 @@ export default () => (
     <Brand>Stream things!</Brand>
     <Menu>
       <MenuLink>
-        <NavLink 
-          to="/"
-          exact activeClassName="active"
-        >Home</NavLink>
+        <NavLink to='/' exact activeClassName='active'>
+          Home
+        </NavLink>
       </MenuLink>
       <MenuLink>
-        <NavLink 
-          to="/about" 
-          exact activeClassName="active"
-        >About</NavLink>
+        <NavLink to='/about' exact activeClassName='active'>
+          About
+        </NavLink>
       </MenuLink>
     </Menu>
   </Header>
