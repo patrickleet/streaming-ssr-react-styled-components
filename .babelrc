@@ -1,7 +1,16 @@
 {
   "env": {
+    "test": {
+      "presets":[
+        ["@babel/preset-env"],
+        ["@babel/preset-react"],
+      ],
+      "plugins": [
+        ["@babel/plugin-syntax-dynamic-import"]
+      ]
+    },
     "server": {
-      "plugins": ["react-imported-component/babel", "babel-plugin-dynamic-import-node"]
+      "plugins": ["react-imported-component/babel", "@babel/plugin-syntax-dynamic-import"]
     },
     "client": {
       "plugins": [
