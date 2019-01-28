@@ -18,7 +18,11 @@
   },
   "lint-staged": {
     "linters": {
-      "src/**/*.js": [
+      "**/*.js": [
+        "prettier-standard",
+        "git add"
+      ],
+      "**/*.jsx": [
         "prettier-standard",
         "git add"
       ]
@@ -26,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format"
+      "pre-commit": "lint-staged && npm run test"
     }
   },
   "author": "",
