@@ -24,5 +24,9 @@
   "collectCoverageFrom": [
     "**/*.{js,jsx}"
   ],
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/app/imported.js",
+    "/node_modules/"
+  ],
   "setupFilesAfterEnv": ["<rootDir>/__tests__/setup.js"]
 }
