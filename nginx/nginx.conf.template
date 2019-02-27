@@ -1,0 +1,30 @@
+events {
+  worker_connections 1024;
+}
+
+http {
+  server {
+    include /etc/nginx/mime.types;
+    listen 1234;
+
+    root   /usr/src/service/dist/client;
+    index  index.html;
+
+    gzip on;
+    gzip_min_length 1000;
+    gzip_buffers 4 32k;
+    gzip_proxied any;
+    gzip_types text/plain application/javascript application/x-javascript text/javascript text/xml text/css;
+    gzip_vary on;
+
+    location ~* \.(?:css|js|eot|woff|woff2|ttf|svg|otf) {
+      # Enable GZip for static files
+      gzip_static on;
+
+      # Indefinite caching for static files
+      expires max;
+
+      add_header Cache-Control "public";
+    }
+  }
+}
