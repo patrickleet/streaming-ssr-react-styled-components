@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run generate-imported-components && parcel app/index.html --hmr-port 1235",
-    "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore app/imported.js --exec 'npm run build && npm run start'",
+    "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore app/imported.js --exec \"npm run build && npm run start\"",
     "format": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js'",
     "build": "rimraf dist && npm run generate-imported-components && npm run create-bundles",
     "build:nginx": "rimraf dist && npm run generate-imported-components && npm run create-bundle:nginx",
