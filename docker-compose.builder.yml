@@ -5,6 +5,7 @@ services:
   base:
     image: node:11
     volumes:
+      - nodemodules:/usr/src/service/node_modules
       - .:/usr/src/service/
     working_dir: /usr/src/service/
 
@@ -22,3 +23,7 @@ services:
     extends:
       service: base
     command: npm run create-bundles
+
+volumes:
+  nodemodules:
+    external: true
