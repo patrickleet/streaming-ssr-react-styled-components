@@ -7,6 +7,7 @@ services:
       - .:/usr/src/service
     environment:
       - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
     working_dir: /usr/src/service
     command: npm run dev
     ports:
