@@ -5,10 +5,12 @@ RUN apk add --update --no-cache \
     make \
     g++
 
-COPY . /src
 WORKDIR /src
+COPY ./package* ./
 
 RUN npm ci
+
+COPY . .
 
 RUN npm run format
 RUN npm run build
