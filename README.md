@@ -10,13 +10,13 @@ Learn how this boilerplate was created with my tutorials on HackerNoon!
 
 UPDATE: Sorry everyone, but Hackernoon broke all the formatting for all of the articles, and I've been asking them to publish the fixes I spent several hours on for months now with no results.
 
-You can find the original versions of the articles on Medium at the following links:
+You can find the original versions of the articles on Medium with proper formatting at the following links:
 
-https://medium.com/hackernoon/move-over-next-js-and-webpack-ba367f07545
-https://medium.com/hackernoon/a-better-way-to-develop-node-js-with-docker-cd29d3a0093
-https://medium.com/hackernoon/enforcing-code-quality-for-node-js-c3b837d7ae17
-https://medium.com/hackernoon/the-100-code-coverage-myth-900b83d20d3d
-https://medium.com/hackernoon/a-tale-of-two-docker-multi-stage-build-layers-85348a409c84
+* https://medium.com/hackernoon/move-over-next-js-and-webpack-ba367f07545
+* https://medium.com/hackernoon/a-better-way-to-develop-node-js-with-docker-cd29d3a0093
+* https://medium.com/hackernoon/enforcing-code-quality-for-node-js-c3b837d7ae17
+* https://medium.com/hackernoon/the-100-code-coverage-myth-900b83d20d3d
+* https://medium.com/hackernoon/a-tale-of-two-docker-multi-stage-build-layers-85348a409c84
 
 Sorry for the inconvenience in tracking these down!
 
