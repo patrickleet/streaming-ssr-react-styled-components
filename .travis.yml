@@ -9,3 +9,14 @@ before_script:
 after_success:
   - npm i -g codecov
   - codecov
+
+jobs:
+  include:
+    - services:
+        - docker
+      script:
+        - docker build . -t ssr
+    - services:
+        - docker
+      script:
+        - docker build . -f nginx/Dockerfile -t nginx
