@@ -1,18 +1,18 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import importComponent from 'react-imported-component'
+import { lazy, LazyBoundary } from 'react-imported-component'
 import { GlobalStyles } from './styles'
 import Header from './components/Header'
 import Home from './pages/Home'
 import LoadingComponent from './pages/Loading'
-import ErrorComponent from './pages/Error'
 
-const About = importComponent(() => import('./pages/About'), {
-  LoadingComponent,
-  ErrorComponent
-})
+const About = lazy(() => import('./pages/About'))
 
-export const renderAboutPage = () => <About />
+export const renderAboutPage = () => (
+  <LazyBoundary fallback={<LoadingComponent />}>
+    <About />
+  </LazyBoundary>
+)
 
 const App = () => (
   <React.Fragment>

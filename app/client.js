@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter } from 'react-router-dom'
 import { rehydrateMarks } from 'react-imported-component'
-import importedComponents from './imported' // eslint-disable-line
 import App from './App'
 
 export const hydrate = (app, element) => () => {
