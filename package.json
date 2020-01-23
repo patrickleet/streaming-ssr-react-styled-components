@@ -67,7 +67,7 @@
     "nodemon": "1.18.10",
     "parcel-bundler": "1.12.4",
     "prettier-standard": "9.1.1",
-    "react-hot-loader": "4.8.0",
+    "react-hot-loader": "4.12.19",
     "rimraf": "2.6.3"
   }
 }
