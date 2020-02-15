@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run generate-imported-components && parcel app/index.html --hmr-port 1235",
     "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore app/imported.js --exec \"npm run build && npm run start\"",
-    "format": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js'",
+    "format": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js' --format",
     "build": "rimraf dist && npm run generate-imported-components && npm run create-bundles",
     "build:nginx": "rimraf dist && npm run generate-imported-components && npm run create-bundle:nginx",
     "create-bundles": "concurrently \"npm run create-bundle:client\" \"npm run create-bundle:server\"",
@@ -19,16 +19,10 @@
     "test:watch": "cross-env BABEL_ENV=test jest --config jest.json --watch"
   },
   "lint-staged": {
-    "linters": {
-      "**/*.js": [
-        "prettier-standard",
-        "git add"
-      ],
-      "**/*.jsx": [
-        "prettier-standard",
-        "git add"
-      ]
-    }
+    "*": [
+      "prettier-standard --lint",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
