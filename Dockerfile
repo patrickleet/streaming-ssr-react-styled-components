@@ -3,7 +3,8 @@ FROM node:12.16.0-alpine AS build
 RUN apk add --update --no-cache \
     python \
     make \
-    g++
+    g++ \
+    git
 
 WORKDIR /src
 COPY ./package* ./
