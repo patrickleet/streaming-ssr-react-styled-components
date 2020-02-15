@@ -11,7 +11,7 @@ WORKDIR /src
 
 RUN npm ci
 
-RUN npm run format
+RUN npm run lint
 RUN npm run build:nginx
 RUN npm run test
 
