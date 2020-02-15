@@ -13,7 +13,7 @@ RUN npm ci
 
 COPY . .
 
-RUN npm run format
+RUN npm run lint
 RUN npm run build
 RUN npm run test
 

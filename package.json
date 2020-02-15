@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "npm run generate-imported-components && parcel app/index.html --hmr-port 1235",
     "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore app/imported.js --exec \"npm run build && npm run start\"",
+    "lint": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js' --lint",
+    "lint:fix": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js' --lint --fix",
     "format": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js' --format",
     "build": "rimraf dist && npm run generate-imported-components && npm run create-bundles",
     "build:nginx": "rimraf dist && npm run generate-imported-components && npm run create-bundle:nginx",

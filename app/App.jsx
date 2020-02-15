@@ -15,7 +15,7 @@ export const renderAboutPage = () => (
 )
 
 const App = () => (
-  <React.Fragment>
+  <>
     <GlobalStyles />
     <Header />
 
@@ -24,7 +24,7 @@ const App = () => (
       <Route exact path='/about' render={renderAboutPage} />
       <Redirect to='/' />
     </Switch>
-  </React.Fragment>
+  </>
 )
 
 export default App
