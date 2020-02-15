@@ -1,9 +1,8 @@
 version: '2'
 
 services:
-
   base:
-    image: node:11
+    image: node:12
     volumes:
       - nodemodules:/usr/src/service/node_modules
       - .:/usr/src/service/
