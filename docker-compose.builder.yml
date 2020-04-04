@@ -1,26 +1,24 @@
-version: '2'
+version: '3.4'
+
+x-base:
+  &base
+  image: node:12
+  volumes:
+    - nodemodules:/usr/src/service/node_modules
+    - .:/usr/src/service/
+  working_dir: /usr/src/service/
 
 services:
-  base:
-    image: node:12
-    volumes:
-      - nodemodules:/usr/src/service/node_modules
-      - .:/usr/src/service/
-    working_dir: /usr/src/service/
-
   install:
-    extends:
-      service: base
+    << : *base
     command: npm i
 
   build:
-    extends:
-      service: base
+    << : *base
     command: npm run build
 
   create-bundles:
-    extends:
-      service: base
+    << : *base
     command: npm run create-bundles
 
 volumes:
