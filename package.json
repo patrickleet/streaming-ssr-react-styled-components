@@ -58,7 +58,7 @@
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
     "husky": "4.2.5",
-    "jest": "25.5.3",
+    "jest": "25.5.4",
     "lint-staged": "10.2.2",
     "nodemon": "2.0.3",
     "parcel-bundler": "1.12.4",
