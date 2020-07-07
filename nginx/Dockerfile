@@ -17,7 +17,7 @@ RUN npm run test
 
 RUN npm prune --production
 
-FROM nginx:1.17.9-alpine
+FROM nginx:1.19.0-alpine
 
 RUN apk add --update --no-cache curl
 
