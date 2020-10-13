@@ -60,7 +60,7 @@
     "husky": "4.3.0",
     "jest": "26.5.3",
     "lint-staged": "10.4.0",
-    "nodemon": "2.0.4",
+    "nodemon": "2.0.5",
     "parcel-bundler": "1.12.4",
     "prettier-standard": "16.4.1",
     "react-hot-loader": "4.13.0",
