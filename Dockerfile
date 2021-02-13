@@ -1,4 +1,4 @@
-FROM node:12.20.1-alpine AS build
+FROM node:12.20.2-alpine AS build
 
 RUN apk add --update --no-cache \
     python \
@@ -19,7 +19,7 @@ RUN npm run test
 
 RUN npm prune --production
 
-FROM node:12.20.1-alpine
+FROM node:12.20.2-alpine
 
 RUN apk add --update --no-cache curl
 
