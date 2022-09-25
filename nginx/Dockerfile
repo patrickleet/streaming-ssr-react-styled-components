@@ -1,4 +1,4 @@
-FROM node:12.22.1-alpine AS build
+FROM node:18.9.0-alpine AS build
 
 RUN apk add --update --no-cache \
     python \
